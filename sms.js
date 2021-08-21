@@ -9,7 +9,6 @@ client.messages
      to: '+918979238598'
   })
   .then(message => console.log(message));
-
 // var navigator=window.navigator;
 // if ("geolocation" in navigator) {
 //   // check if geolocation is supported/enabled on current browser

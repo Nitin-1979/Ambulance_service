@@ -165,7 +165,7 @@ app.post("/feedbackreceive",function(req,res){
 
 app.get("/logout",function(req, res) {
    req.logout(); 
-//   req.flash("success","Succesfully logged out!");
+   req.flash("success","Succesfully logged out!");
    res.redirect("/");
 });
 
@@ -282,16 +282,16 @@ var air=0;
 var mort=0;
 var pta=0;
 
-app.post("/searchambulance",function(req,res){
-    // console.log(req.body.location)
-    // console.log(req.body.destination);
+app.post("/searchambulances",function(req,res){
+    console.log(req.body.location)
+    console.log(req.body.destination);
     Ambulance.find({status:'Available'},function(err, ambulances) {
         if(err){
             console.log(err);
             res.redirect("/mainpage");
         }
         else{
-            // console.log(ambulances);
+            console.log(ambulances);
             ambulances.forEach(function(ambulance){
                if(ambulance.type=="Basic Life Support Ambulance"){
                    basic+=1;
