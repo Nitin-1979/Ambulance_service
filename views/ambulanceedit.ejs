@@ -28,7 +28,7 @@
   <body>
 
 <div class="container border">
-
+<!--a ejs page to update ambulance info also with the option to delete -->
      <form action="/updateambulance/<%=ambulance._id%>?_method=PUT" method="POST">
                       <div class="form-row">
                         <div class="form-group col-md-12">
@@ -91,7 +91,7 @@
                       
                       
                     </form>
-                    
+                    <!--a delete option to delete ambulance -->
                     <form action="/deleteambulance/<%= ambulance._id %>?_method=delete" method="POST">
                             <button type="submit"  class="btn btn-danger pull pull-right delete" > Delink </button>
                     </form>

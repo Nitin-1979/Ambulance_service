@@ -212,7 +212,7 @@
   </head>
 
   <body>
-
+      <!--onetapbooking : a ejs template for one tap booking-->
       <div class="head">
         <div class="logo1">
         </div>
@@ -233,6 +233,7 @@
 
           <div class="three">
             <ul>
+              <!--showing features-->
               <li>Fastest Ambulance Booking Ever</li>
               <li>Smart AutoSelect Suitable Type Feature if required Not Available</li>
               <li>24/7 emergencies and technical support</li>
@@ -252,9 +253,10 @@
          <div id="logincontainer">
 
               <div class="content">
+                <!--a form for login which asks for username,password and type of ambulance and then click on quick book button which redirects you to booking page -->
                 <form action="/login" method="POST">
                   <input type="text" name="username" placeholder="Mobile or Email">
-                    <input type="text" name="location" placeholder="Location">
+                  <input type="text" name="location" placeholder="Location">
                   <select name="type"  searchable="Search here..">
                          <option value="" selected>Select Type</option>
                          <option  value="Basic Life Support Ambulance">Basic Life Support Ambulance</option>
@@ -276,6 +278,7 @@
       </div>
 
       <script type="text/javascript">
+      //just for styling the elements on page
         var l = document.getElementById("logincontainer");
         var s = document.getElementById("signupcontainer");
 

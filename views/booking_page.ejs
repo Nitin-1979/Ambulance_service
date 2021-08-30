@@ -267,7 +267,9 @@
       Meditek
     </div>
   </div>
-
+  <!--a booking confirmation page where user lands when he press on confirm booking tab-->
+  <!--where user is asked about his pickup locationa and dest location-->
+  <!-- shows list of ambulance types with there waiting times (in minutes)-->
   <div class="main">
     <div class="heading">
       Available Ambulances
@@ -308,7 +310,17 @@
 
     <div class="ambulances">
   
-  
+      <!--a ambulance is only shown in it is avaiable which is done by checking its count like basic>0-->
+      <!--then we calculate the waiting time(random) using function math.floor((Math.random() *10)+5) -->
+
+      <!--it then shows info as
+        ambulance type 
+        waiting time
+        ambulance type:
+        pickup location:
+        dest location:
+      -->
+      <!--then user will click on submit on what ambulance he wants which will redirect him to thank_you page-->
       <% if(basic>0){ var t=Math.floor((Math.random() *10)+5);%>
       <div class="inside">
         <div class="left1">

@@ -232,13 +232,14 @@
 
               <div class="nav">
                 <ul>
-                  <li onclick="function1()">Login</li>
-                  <li onclick="function2()">Sign up</li>
+                  <li onclick="function1()">Login</li><!--option to login for older user-->
+                   <li onclick="function2()">Sign up</li><!--option to signup for new user -->
                 </ul>
               </div>
          <div id="logincontainer">
 
               <div class="content">
+                <!--a login form which takes mobile no or email as username and asks for password to login and redirects you to userhomepage after sucessfull auth-->
                 <form action="/login" method="POST">
                   <input type="text" name="username" placeholder="Mobile or Email" autocomplete="off">
                   <input type="password" name="password" placeholder="Password">
@@ -262,6 +263,7 @@
         <div id="signupcontainer">
 
           <div class="content">
+            <!--a signup form which asks fullname,email,mob no,password to sign up and when you sign up redirects you to userhoempage -->
             <form action="/userregister" method="POST">
               <input type="text" placeholder="Full Name" name="fullname" autocomplete="off">
               <input type="text" placeholder="Email" name="username" autocomplete="off">
@@ -277,6 +279,7 @@
       </div>
 
       <script type="text/javascript">
+      //to add style to elements 
         var l = document.getElementById("logincontainer");
         var s = document.getElementById("signupcontainer");
 
