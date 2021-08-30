@@ -399,7 +399,7 @@
             <div class="sidebar-header">
                 <h3>Admin</h3>
             </div>
-
+            <!--side navbar that shows the following option :all ambulances list ,available ambulance,engaged ambulance,feedback list ,setting to be done-->
             <ul class="list-unstyled components">
                 <p><i class="fas fa-user-tie"></i> Hello Admin</p>
                 <li class="tablinks active" onclick="show(event, 'Overview') ">
@@ -426,6 +426,7 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
+                    <!--a logout option for admin to logout-->
                     <form action="/adminlogout" method="POST">
                       <button type="submit" class="btn btn-danger btn-lg">LOGOUT</button>
                     </form>
@@ -449,7 +450,7 @@
 
                   </div>
               </nav>
-              
+              <!-- homepage of user-->
               <div class="container overview">
                     	
                     		<div class="row">
@@ -488,6 +489,7 @@
 
           </div>
 
+          <!--option to add filters about types of ambulance and then click on apply to apply filters-->
           <div class="subcontent" id="Ambulances">
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
                   <div class="container-fluid">
@@ -516,6 +518,7 @@
 
                   </div>
               </nav>
+              <!-- loop for looping over all the  ambulance to show infot about ambulance-->
                 <%  ambulances.forEach(function(ambulance){ %>
                 <div class="outercard col-md-3">
                   <div class="card">
@@ -537,7 +540,7 @@
 
           </div>
 
-
+          <!--when you click on Available option on side navbar and then it shows info about ambulance which are Available -->
           <div class="subcontent" id="Available">
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
                   <div class="container-fluid">
@@ -586,6 +589,8 @@
                                   <% }}); %>
           </div>
 
+
+          <!--when you click on enagaged option in navbar and then shows info about ambulance which are enagaged -->
           <div class="subcontent" id="Engagged">
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
                   <div class="container-fluid">
@@ -656,7 +661,7 @@
 
                   </div>
               </nav>
-            
+            <!--option to show the feedback by looping on feedback list and then a button resolved to delete the feedback-->
              <% feedbacks.forEach(function(feedback){ i++;  %>
               <div class="list-groupp">
         		    <div onclick="showfeedback(<%="feedback"+i%>)" class="list-group-iteem" style="text-transform:uppercase;"><i class="fas fa-user-tie" style="float:left margin-right:20px"></i> <%=feedback.full_name%><i class="fas fa-caret-down" style="float:right"></i>
@@ -682,6 +687,7 @@
 
                   </div>
               </nav>
+              <!--option to add new ambulance : type,drivername,driver add,driver mob,city of amb,zip,state,vech no ,insurance no and then click on register-->
               <div class="addnewmember">
                     <h1>ADD NEW AMBULANCE</h1>
                     <form action="/newambulance" method="post">

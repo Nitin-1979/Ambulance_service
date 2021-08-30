@@ -114,7 +114,20 @@
   </head>
   <body>
 
-
+<!--a ejs page showing info about ambulance like -->
+<!--
+about ambulance
+driver name
+driver contact
+driver address
+ambulance type
+city
+state
+zip code
+vechile no of ambulance
+reg date of ambulance
+status of ambulance(engaged ,aviable)
+-->
   <div class="container">
     <div class="card-deck ">
         <div class="card bg-primary">
@@ -137,9 +150,11 @@
 
         <div class="card bg-warning">
           <div class="card-body text-center track">
+            <!--a tracking info button-->
               <h4>Tracking Info</h4>
               <hr>
               <ul class="list-group">
+                <!--showing info about wasted history-->
                 <li class="list-group-item active">Live</li>
                 <% if(result.status=='Engaged'){ %>
                   <li class="list-group-item" style="color:grey;"><b style="color:black;"> User :- </b>Suryaprakash Agarwal</li>

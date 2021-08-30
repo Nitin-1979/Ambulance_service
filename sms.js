@@ -1,3 +1,4 @@
+//sms to be send when a user books the ambulance 
 const accountSid = 'AC2b6dca4154a03105caade2a3569d2df1';
 const authToken = 'e7a6457d75e2b89e96729ee055fe95f0';
 const client = require('twilio')(accountSid, authToken);

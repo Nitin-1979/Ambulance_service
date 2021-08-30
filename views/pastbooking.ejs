@@ -51,13 +51,17 @@
 	</style>
 </head>
 <body>
+  <!--a ejs template page that shows past booking of user-->
     <div class="container">
     <h1> My Bookings</h1>
-    <hr>
-	<% for(i=0;i<list.length;i++){ ambulance=ambulances[i];item=list[i]; console.log(i); %>
+    <hr><!-- looping through ambulance array for list of prev ambulance booked and list array for past booking list  -->
+	<% for(i=0;i<list.length;i++)
+    {         
+              ambulance=ambulances[i];
+              item=list[i]; %>
               <div class="list-groupp">
+                <!--using feedback function to represent in form of from:location from to:loaction to and ambulance in form driver:driver name  and contact:driver mobno-->
         		    <div onclick="showfeedback(<%="feedback"+i%>)" class="list-group-iteem" style="text-transform:uppercase;">FROM :  <%=item.from%>    TO : <%=item.to%><i class="fas fa-caret-down" style="float:right"></i>
-
                   <div class="clear"></div>
                   <div class="hid hiddd" id=<%='feedback'+i%> > <hr > <%=ambulance.driver_name%> <br> <%=ambulance.driver_contact%> 
                   </div> </div>

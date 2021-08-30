@@ -277,6 +277,7 @@
   </style>
 </head>
 <body>
+	<!-- a ejs template for user homepage-->
   <div class="head">
       <div class="logo1">
       </div>
@@ -284,6 +285,7 @@
        Ambulance Service
       </div>
       <div class="logo3">
+		  <!--logout option in header for user logout and redirects user to landing page after logout-->
         <a href="/logout">
         	<div class="logo3-inside">
           <i class="fas fa-sign-out-alt"></i> Logout
@@ -291,6 +293,7 @@
         </a>
       </div>
       <div class="logo3">
+		  <!--a features option in header for directing user to features page -->
         <a href="/features">
         	<div class="logo3-inside">
           <i class="fas fa-table"></i> Features
@@ -298,6 +301,7 @@
         </a>
       </div>
       <div class="logo3">
+		  <!--a pastbooking option in header which redirects user to pastbooking ejs page-->
         <a href="/pastbooking">
         	<div class="logo3-inside">
           <i class="fas fa-list-ul"></i> My bookings
@@ -307,6 +311,7 @@
       <div class="logo3">
         <a>
         	<div class="logo3-inside">
+				<!--a profile option in header which shows information of about the logged in user-->
           <i class="fas fa-user"></i> Profile
         </div>
         </a>
@@ -329,6 +334,7 @@
 							<div class="panel-body">
 								<h3>Ambulance at your Service!</h3>
 								<br>
+								<!--a form that askes user for pickup location ,selecting hospital and then submitting it redirectes user to booking page -->
 								<form action="/searchambulance" method="POST">
 									<div class="form-group">
 										<input type="text" name="location" placeholder="PICKUP LOCATION" class="form-control" id="email">
@@ -361,6 +367,8 @@
 				</div>
 			</div>
     </div>
+
+	<!--rest of the page shows info about types of ambulance service (that is type of ambulance)-->
 
   <div class="container">
 		<h1> Ambulance Services</h1>
@@ -585,7 +593,9 @@
 			</div>
 		</div>
 	</div>
+
 <script type="text/javascript">
+	//script which just styles the element of page
 	function show1(){
 		document.getElementById("cnt1").style.display="block";
 		document.getElementById("cnt2").style.display="none";
