@@ -1,16 +1,17 @@
-var express = require("express");
-var app = express();
-var bodyparser=require("body-parser");
-var mongoose= require("mongoose");
-var passport=require("passport");
-var localStrategy=require("passport-local");
+var express = require("express");//web app framework used for node.js
+var app = express();//varaible for using express 
+var bodyparser=require("body-parser");//body-parser extracts the entire body portion of an incoming request stream and exposes it on req.body.
+var mongoose= require("mongoose");//ok
+var passport=require("passport");//ok
+var localStrategy=require("passport-local");//ok
 var passportLocalMongoose = require("passport-local-mongoose");//
 var methodOverride=require("method-override");
-var flash=require("connect-flash");
-var async=require("async");
-var nodemailer=require("nodemailer");
-var smtpTransport = require('nodemailer-smtp-transport');
-var crypto=require("crypto");//
+var flash=require("connect-flash");//ok
+var async=require("async");//
+var nodemailer=require("nodemailer");//for sending mails 
+var smtpTransport = require('nodemailer-smtp-transport');//SMTP is the main transport in Nodemailer for delivering messages
+var crypto=require("crypto");//used for hashing the crypto module provides a way of handling encrypted data.
+//also used twilio library
 
 
 var User=require("./models/user");//variable of schema user type(like a object of schema user)
@@ -34,7 +35,7 @@ app.use(express.static(__dirname+"/public"));//saving the path directory
 app.use(bodyparser.urlencoded({extended:true}));//body-parser is an NPM package that parses incoming request bodies in a middleware before your handlers, available under the req.body property.//middleware for parsing bodies from URL
 app.use(methodOverride("_method"));//Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn’t support it.
 app.use(flash());//to use flash library to flash message(notifaction type).
-mongoose.connect("mongodb://localhost/test");//to connect server to database.
+mongoose.connect("mongodb://localhost:27017/test");//to connect server to database.
 
 //setting up passport for auth //https://stackoverflow.com/questions/27637609/understanding-passport-serialize-deserialize
 app.use(passport.initialize());//intilazing passport
@@ -309,7 +310,7 @@ var mort=0;
 var pta=0;
 
 //router for searching the ambulance from location to dest as requested by the user
-app.post("/searchambulances",function(req,res){
+app.post("/searchambulance",function(req,res){
     console.log(req.body.location)
     console.log(req.body.destination);
     //only finding those ambulance whose status is showing Available
@@ -559,7 +560,7 @@ app.get("/logout",function(req, res) {
 });
 
 const hostname = '127.0.0.1';//name of host which is hosting the website
-const port = 3000;//port on which we are listening
+const port = 8000;//port on which we are listening
 
 app.listen(port,hostname,function(req,res){//making app to listen on port and hostname and run the website
    console.log("Meditech server running....."); 
