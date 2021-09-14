@@ -187,7 +187,7 @@
 				background-position: center;
 				box-shadow: 1px 3px 20px grey;
 				height: 300px;
-				width: 470px;
+				width: 350px;
 			}
 			#img2{
 				border-radius: 7px;
@@ -197,7 +197,7 @@
 				background-position: center;
 				height: 300px;
 				box-shadow: 1px 3px 20px grey;
-				width: 470px;
+				width: 350px;
 			}
 			#img3{
 								border-radius: 7px;
@@ -206,7 +206,7 @@
 				background-size: cover;
 				background-position: center;
 				height: 300px;
-				width: 470px;
+				width: 350px;
 				box-shadow: 1px 3px 20px grey;
 			}
 			#img4{
@@ -216,7 +216,7 @@
 				background-size: cover;
 				background-position: center;
 				height: 300px;
-				width: 470px;
+				width: 350px;
 				box-shadow: 1px 3px 20px grey;
 			}
 			#img5{
@@ -226,7 +226,7 @@
 				background-size: cover;
 				background-position: center;
 				height: 300px;
-				width: 470px;
+				width: 350px;
 				box-shadow: 1px 3px 20px grey;
 			}
 			.display1:hover #img1{
@@ -275,9 +275,21 @@
 				margin: 50px auto;
 				padding: 20px;
 				float: left;
-				height: 800px;
-				width: 45%;
+				height: 550px;
+				width: 300px;
 				background: url('left.png');
+				background-position: 50% 50%;
+				background-size: contain;
+				background-repeat: no-repeat;
+				box-shadow: 1px 3px 20px grey;
+			}
+			.middleone{
+				margin: 50px 50px;
+				padding: 20px;
+				float: left;
+				height: 550px;
+				width: 300px;
+				background: url('middle.png');
 				background-position: 50% 50%;
 				background-size: contain;
 				background-repeat: no-repeat;
@@ -286,9 +298,9 @@
 			.right{
 				margin: 50px auto;
 				padding: 20px;
-				height: 800px;
+				height: 550px;
 				float: right;
-				width: 45%;
+				width: 300px;
 				background: url('right.png');
 				background-position: 50% 50%;
 				background-size: contain;
@@ -313,9 +325,11 @@
     <div class="head">
         <div class="logo1">
         </div>
-        <div class="logo2">
-          Meditek
-        </div>
+        <a href="/mainpage">
+			<div class="logo2">
+			 Ambulance Service
+			</div>
+			</a>
               <div class="logo3">
         <a href="/logout">
         	<div class="logo3-inside">
@@ -435,6 +449,7 @@
 		 <div id="doctors" class="subcontent">
 				<div class="doctorsmain">
 					<div class="left"></div>
+					<div class="middleone"></div>
 					<div class="right"></div>
 				</div>
 		</div>
