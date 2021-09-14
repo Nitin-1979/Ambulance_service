@@ -563,5 +563,5 @@ const hostname = '127.0.0.1';//name of host which is hosting the website
 const port = 8000;//port on which we are listening
 
 app.listen(port,hostname,function(req,res){//making app to listen on port and hostname and run the website
-   console.log("Meditech server running....."); 
+   console.log(" server running....."); 
 });
